@@ -1,0 +1,41 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Dec  8 13:24:25 2025
+[*]
+[dumpfile] "/home/lingfunny/2025-fall-yatcpu-repo/lab1/test_run_dir/InstructionDecoder_of_Single_Cycle_CPU_should_produce_correct_control_signal/InstructionDecode.vcd"
+[dumpfile_mtime] "Mon Dec  8 08:26:24 2025"
+[dumpfile_size] 2841
+[savefile] "/home/lingfunny/2025-fall-yatcpu-repo/lab1/test_run_dir/InstructionDecoder_of_Single_Cycle_CPU_should_produce_correct_control_signal/report.gtkw"
+[timestart] 4
+[size] 1289 600
+[pos] 153 -562
+*0.391768 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 214
+[signals_width] 348
+[sst_expanded] 1
+[sst_vpaned_height] 151
+@28
+TOP.clock
+@200
+-
+@22
+TOP.io_instruction[31:0]
+@200
+-
+@28
+TOP.io_ex_aluop1_source
+TOP.io_ex_aluop2_source
+@22
+TOP.io_ex_immediate[31:0]
+@200
+-
+@22
+TOP.io_regs_reg1_read_address[4:0]
+TOP.io_regs_reg2_read_address[4:0]
+@200
+-
+@28
+TOP.io_memory_write_enable
+TOP.io_reg_write_enable
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Dec  8 13:39:43 2025
+[*]
+[dumpfile] "/home/lingfunny/2025-fall-yatcpu-repo/lab1/test_run_dir/Single_Cycle_CPU_should_calculate_recursively_fibonacci10/TestTopModule.vcd"
+[dumpfile_mtime] "Mon Dec  8 08:26:26 2025"
+[dumpfile_size] 4451337
+[savefile] "/home/lingfunny/2025-fall-yatcpu-repo/lab1/test_run_dir/Single_Cycle_CPU_should_calculate_recursively_fibonacci10/fib_waveform.gtkw"
+[timestart] 100002
+[size] 1000 585
+[pos] -1285 -242
+*0.000000 100003 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 214
+[signals_width] 383
+[sst_expanded] 1
+[sst_vpaned_height] 146
+@22
+TOP.io_mem_debug_read_address[31:0]
+@200
+-
+@22
+TOP.io_mem_debug_read_data[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
