@@ -66,24 +66,33 @@ class CLINT extends Module {
     io.instruction_address + 4.U,
   )
   //lab2(CLINTCSR)
-  /*
-  val interrupt_enable =
+  io.csr_bundle.mstatus_write_data := io.csr_bundle.mstatus
+  io.csr_bundle.mepc_write_data := io.csr_bundle.mepc
+  io.csr_bundle.mcause_write_data := io.csr_bundle.mcause
+  io.csr_bundle.direct_write_enable := false.B
+  io.interrupt_assert := false.B
+  io.interrupt_handler_address := 0.U
 
-  when(io.interrupt_flag =/= InterruptStatus.None && interrupt_enable) {
-    io.csr_bundle.mstatus_write_data :=
-    io.csr_bundle.mepc_write_data :=
-    io.csr_bundle.mcause_write_data :=
-    io.csr_bundle.direct_write_enable :=
-    io.interrupt_assert :=
-    io.interrupt_handler_address :=
+  when(io.interrupt_flag =/= InterruptCode.None && interrupt_enable) {
+    io.csr_bundle.direct_write_enable := true.B
+    io.csr_bundle.mepc_write_data := instruction_address
+    io.csr_bundle.mcause_write_data := Mux(io.interrupt_flag === InterruptCode.Timer0, 0x80000007L.U, 0x8000000BL.U)
+    io.csr_bundle.mstatus_write_data := (io.csr_bundle.mstatus & ~0x88.U(32.W)) | (io.csr_bundle.mstatus(3) << 7)
+    io.interrupt_assert := true.B
+    io.interrupt_handler_address := io.csr_bundle.mtvec
   }
   .elsewhen(io.instruction === InstructionsEnv.ebreak || io.instruction === InstructionsEnv.ecall) {
-    ......
+    io.csr_bundle.direct_write_enable := true.B
+    io.csr_bundle.mepc_write_data := instruction_address
+    io.csr_bundle.mcause_write_data := Mux(io.instruction === InstructionsEnv.ecall, 11.U, 3.U)
+    io.csr_bundle.mstatus_write_data := (io.csr_bundle.mstatus & ~0x88.U(32.W)) | (io.csr_bundle.mstatus(3) << 7)
+    io.interrupt_assert := true.B
+    io.interrupt_handler_address := io.csr_bundle.mtvec
   }
   .elsewhen(io.instruction === InstructionsRet.mret) {
-    ......
-  }.otherwise {
-    ......
+    io.csr_bundle.direct_write_enable := true.B
+    io.csr_bundle.mstatus_write_data := (io.csr_bundle.mstatus & ~0x88.U(32.W)) | (io.csr_bundle.mstatus(7) << 3) | 0x80.U(32.W)
+    io.interrupt_assert := true.B
+    io.interrupt_handler_address := io.csr_bundle.mepc
   }
-   */
 }

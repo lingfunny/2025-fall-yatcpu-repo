@@ -35,4 +35,22 @@ class Timer extends Module {
 
   //lab2(CLINTCSR)
   //finish the read-write for count,limit,enabled. And produce appropriate signal_interrupt
+  // 4: limit, 8: enabled
+  when(io.bundle.write_enable) {
+    when(io.bundle.address === 4.U) {
+      limit := io.bundle.write_data
+    }.elsewhen(io.bundle.address === 8.U) {
+      enabled := io.bundle.write_data
+    }
+  }
+  io.bundle.read_data := MuxLookup(io.bundle.address, 0.U, IndexedSeq(
+    4.U -> limit,
+    8.U -> enabled.asUInt
+  ))
+
+  when(enabled) {
+    count := count + 1.U
+  }
+
+  io.signal_interrupt := (count >= limit) && enabled
 }

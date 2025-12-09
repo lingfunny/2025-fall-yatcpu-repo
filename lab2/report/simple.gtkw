@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Tue Dec  9 11:02:39 2025
+[*]
+[dumpfile] "/home/lingfunny/2025-fall-yatcpu-repo/lab2/test_run_dir/Single_Cycle_CPU_with_CSR_and_CLINT_should_jump_to_trap_handler_and_then_return/TestTopModule.vcd"
+[dumpfile_mtime] "Tue Dec  9 10:37:02 2025"
+[dumpfile_size] 370995
+[savefile] "/home/lingfunny/2025-fall-yatcpu-repo/lab2/test_run_dir/Single_Cycle_CPU_with_CSR_and_CLINT_should_jump_to_trap_handler_and_then_return/simple.gtkw"
+[timestart] 3994
+[size] 1842 854
+[pos] 831 -474
+*-2.000000 4015 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[sst_width] 214
+[signals_width] 438
+[sst_expanded] 1
+[sst_vpaned_height] 241
+@28
+TOP.clock
+@200
+-
+@22
+TOP.io_mem_debug_read_address[31:0]
+@23
+TOP.io_mem_debug_read_data[31:0]
+@200
+-
+@28
+TOP.TestTopModule.cpu_io_memory_bundle_write_enable
+@22
+TOP.TestTopModule.cpu_io_memory_bundle_address[31:0]
+TOP.TestTopModule.cpu_io_memory_bundle_write_data[31:0]
+@200
+-
+@22
+TOP.TestTopModule.io_interrupt_flag[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
